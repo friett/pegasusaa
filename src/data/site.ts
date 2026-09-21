@@ -9,6 +9,18 @@ export const steveMitchell = {
   ],
 } as const;
 
+export const ricardoQuintero = {
+  name: "Ricardo Antonio Quintero Vega",
+  role: "Airport Digital Transformation, ICT & Cybersecurity",
+  path: "/ricardo-quintero",
+  image: "/assets/team/ricardo-quintero.webp",
+  bio: [
+    "Ricardo has more than 35 years of experience in digital transformation, ICT, enterprise architecture and cybersecurity across airports and other critical infrastructure. He has held senior technology leadership roles at Munich Airport International and Tocumen International Airport in Panama, following earlier work as Deputy CIO and Senior Project Manager at the Panama Canal Commission.",
+    "He helps airports develop technology strategies, integrate operational and business systems, and strengthen cybersecurity and operational resilience. His work brings together IT and operational technology, with a focus on architecture, governance and the secure integration of existing systems. He also advises on technology modernisation, programme delivery and the use of data and AI to understand complex airport environments.",
+    "Ricardo holds an MSc in Information Security from Royal Holloway, University of London, an MBA in Strategic Management from Nova Southeastern University and a BSc in Computer Science from the University of Central Florida.",
+  ],
+} as const;
+
 export const team = [
   {
     group: "Directors",
@@ -58,6 +70,7 @@ export const team = [
         role: "Airport Business & Market Analysis",
         path: "/justin-powell",
       },
+      ricardoQuintero,
       {
         name: "Johan Schölvinck",
         role: "Airport Commercial Development",

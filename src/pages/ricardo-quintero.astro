@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CallToAction from "../components/CallToAction.astro";
+import PageHero from "../components/PageHero.astro";
+import { ricardoQuintero } from "../data/site";
+import { withBase } from "../lib/paths";
+---
+
+<BaseLayout
+  title={ricardoQuintero.name}
+  description={`${ricardoQuintero.name} is a Pegasus senior advisor specialising in ${ricardoQuintero.role.toLowerCase()}.`}
+  image={ricardoQuintero.image}
+>
+  <PageHero eyebrow="Pegasus advisor" title={ricardoQuintero.name} />
+  <section class="profile-section">
+    <div class="profile-grid shell">
+      <div class="profile-portrait">
+        <img src={withBase(ricardoQuintero.image)} alt={ricardoQuintero.name} />
+      </div>
+      <div class="profile-copy">
+        <p class="kicker">Senior advisor</p>
+        <h2>{ricardoQuintero.role}</h2>
+        {
+          ricardoQuintero.bio.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <CallToAction />
+</BaseLayout>
