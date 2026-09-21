@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import CallToAction from "../components/CallToAction.astro";
+import { withBase } from "../lib/paths";
+const pillars = [
+  { name: "Architect", title: "A clear architecture for the whole airport", text: "Establish how operational, business and technology systems should work together before committing to individual solutions. We help airport owners retain oversight of the digital architecture throughout terminal development and modernisation.", output: "Architecture blueprints, design principles and governance for technology decisions." },
+  { name: "Integrate", title: "Systems that support one operation", text: "Align baggage handling, passenger processing, airport databases, access control, CCTV and building systems. We review interfaces, responsibilities and dependencies, including the fibre, Wi-Fi, private 5G and distributed antenna networks that support them.", output: "Integration requirements, interface and dependency maps, and independent review of supplier proposals." },
+  { name: "Secure", title: "Cyber resilience built into operations", text: "Assess how a security incident could move between IT and operational technology and affect airport services. We help align cybersecurity governance, network segmentation, incident response and recovery planning with operational priorities.", output: "A prioritised risk assessment, security architecture recommendations and a resilience improvement plan." },
+  { name: "Transform", title: "A practical path from legacy to modern", text: "Understand existing assets and dependencies before replacing them. We help airports assess where data, automation and AI-assisted discovery can improve visibility, then sequence modernisation around operational continuity and investment priorities.", output: "A phased transformation roadmap, use-case priorities and programme governance." },
+];
+---
+<BaseLayout title="Airport Digital Architecture & Cyber Resilience" description="Independent airport advisory for digital architecture, systems integration, IT/OT cybersecurity and practical technology transformation.">
+  <PageHero eyebrow="Digital architecture & cyber resilience advisory" title="An integrated, resilient digital airport." intro="Independent advice to help airport owners connect technology decisions with operational needs, from new terminals to the modernisation of existing systems." />
+  <section class="section">
+    <div class="shell intro-grid">
+      <div><p class="kicker">On the airport’s side</p><h2>Protect the bigger picture.</h2></div>
+      <div class="large-copy">
+        <p>Airport technology spans many suppliers, systems and teams. Each project needs to fit an overall architecture that supports safe, reliable operations and long-term change.</p>
+        <p>Pegasus Airport Digital Architecture & Cyber Resilience Advisory helps clients define that architecture, challenge technology choices and coordinate delivery. Our role is to represent the airport’s interests across vendors, systems integrators and engineering teams.</p>
+        <a class="text-link" href={withBase('/contact/')}>Discuss your airport’s priorities <span>↗</span></a>
+      </div>
+    </div>
+  </section>
+  <section class="section pillars">
+    <div class="shell">
+      <p class="kicker">Four connected areas of advice</p><h2>Architect. Integrate. Secure. Transform.</h2>
+      <div class="pillar-grid">
+        {pillars.map((pillar, index) => <article class="pillar"><p class="kicker">0{index + 1} / {pillar.name}</p><h3>{pillar.title}</h3><p>{pillar.text}</p><p class="deliverable"><strong>Typical outputs</strong><br />{pillar.output}</p></article>)}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="shell intro-grid">
+      <div><p class="kicker">Where we can help</p><h2>Advice at the decisions that count.</h2></div>
+      <div class="large-copy">
+        <h3>New terminals and major developments</h3><p>Define digital requirements early, establish who owns the overall architecture and review how proposed systems will integrate before procurement and implementation.</p>
+        <h3>Existing airports and legacy systems</h3><p>Build a clearer picture of assets, interfaces and operational dependencies. Identify what can be retained, what needs attention and how to phase upgrades while the airport continues to operate.</p>
+        <h3>Cybersecurity and operational continuity</h3><p>Bring operations, ICT and security teams together around shared risks, responsibilities and recovery priorities. Turn technical findings into decisions that airport leadership can act on.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section approach">
+    <div class="shell intro-grid">
+      <div><p class="kicker">A practical starting point</p><h2>From assessment to a clear plan.</h2></div>
+      <div class="large-copy"><p>We begin by agreeing the airport’s priorities, scope and constraints. A focused review of available documentation, systems and stakeholder needs establishes the current position.</p><p>Findings are translated into a prioritised set of actions, with clear ownership, dependencies and a roadmap for delivery. The scope can extend to independent design reviews, programme oversight or interim technology leadership.</p></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="shell advisor">
+      <img src={withBase('/assets/team/ricardo-quintero.webp')} alt="Ricardo Antonio Quintero Vega" loading="lazy" width="1000" height="918" />
+      <div><p class="kicker">Meet the specialist</p><h2>Ricardo Antonio Quintero Vega</h2><p>Ricardo brings more than 35 years of experience in digital transformation, ICT and cybersecurity, including senior technology roles at Munich Airport International and Tocumen International Airport. He works with Pegasus’s wider team of aviation advisors to connect technology with airport operations and strategy.</p><a class="text-link" href={withBase('/ricardo-quintero/')}>Read Ricardo’s profile <span>↗</span></a></div>
+    </div>
+  </section>
+  <CallToAction />
+</BaseLayout>
+<style>
+  .pillars { background: var(--cloud); }
+  .pillars h2 { max-width: 1000px; }
+  .pillar-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .pillar { background: white; padding: clamp(1.5rem, 3vw, 3rem); border-top: 3px solid var(--gold-500); }
+  .pillar h3 { line-height: 1.2; }
+  .deliverable { border-top: 1px solid var(--line); padding-top: 1.25rem; margin-bottom: 0; }
+  .approach { background: var(--warm); }
+  .advisor { display: grid; grid-template-columns: 1fr 2fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+  .advisor img { width: 100%; height: auto; }
+  .advisor h2 { font-size: clamp(2.2rem, 4vw, 4rem); }
+  @media (max-width: 700px) { .pillar-grid, .advisor { grid-template-columns: 1fr; } .advisor img { max-width: 360px; } }
+</style>
