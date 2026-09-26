@@ -15,9 +15,8 @@ export const ricardoQuintero = {
   path: "/ricardo-quintero",
   image: "/assets/team/ricardo-quintero.webp",
   bio: [
-    "Ricardo has more than 35 years of experience in digital transformation, ICT, enterprise architecture and cybersecurity across airports and other critical infrastructure. He has held senior technology leadership roles at Munich Airport International and Tocumen International Airport in Panama, following earlier work as Deputy CIO and Senior Project Manager at the Panama Canal Commission.",
-    "He helps airports develop technology strategies, integrate operational and business systems, and strengthen cybersecurity and operational resilience. His work brings together IT and operational technology, with a focus on architecture, governance and the secure integration of existing systems. He also advises on technology modernisation, programme delivery and the use of data and AI to understand complex airport environments.",
-    "Ricardo holds an MSc in Information Security from Royal Holloway, University of London, an MBA in Strategic Management from Nova Southeastern University and a BSc in Computer Science from the University of Central Florida.",
+    "Ricardo brings more than 35 years of experience in digital transformation, ICT and cybersecurity, including senior technology leadership experience with Tocumen International Airport and, more recently, airport ICT advisory and transformation experience with Munich Airport International (MAI).",
+    "At Pegasus, he works alongside the wider team of aviation advisors to connect technology, cybersecurity and digital infrastructure with airport operations, development and strategy.",
   ],
 } as const;
 
